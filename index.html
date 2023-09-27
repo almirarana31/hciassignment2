@@ -122,11 +122,11 @@
         <legend>Please fill in this form accordingly!</legend>
       <h3>Personal Details</h3>
       <label for="fname">First Name:</label>
-      <input type="text" minlength="1" id="fname" name="fname"><br><br>
+      <input type="text" minlength="1" id="fname" name="fname" required><br><br>
       <label for="lname">Last Name:</label>
-      <input type="text" minlength="1" id="lname" name="lname"><br><br>
+      <input type="text" minlength="1" id="lname" name="lname" required><br><br>
       <label for="dob">Date of Birth:</label>
-      <input type="date" max="2012-01-01" id="dob" name="dob"><br><br>
+      <input type="date" max="2012-01-01" id="dob" name="dob" required><br><br>
 
       <div style="text-align: center;">
         <table style="width: 50%; margin: 0 auto;">
@@ -135,7 +135,7 @@
               <h3>Gender</h3>
             </td>
             <td>
-              <input type="radio" id="male" name="gender">
+              <input type="radio" id="male" name="gender" required>
               <label for="male">Male</label>
             </td>
           </tr>
@@ -171,7 +171,7 @@
         <option value="ban">Banten (Serang)</option>
       </select><br><br>
       <label for="address">Address:</label><br>
-      <input type="text" minlength="1" id="address" name="address"><br><br>
+      <input type="text" minlength="1" id="address" name="address" required><br><br>
 
   
       <table style="margin: 0 auto;">
@@ -182,33 +182,33 @@
         </tr>
         <tr>
           <td colspan="1">
-            <input type="checkbox" id="cat" name="cat">
+            <input type="checkbox" id="cat" name="animal" required>
             <label for="cat" style="margin-right: 180px;">Cats</label>
           </td>
           <td colspan="1">
-            <input type="checkbox" id="dog" name="dog">
+            <input type="checkbox" id="dog" name="animal">
             <label for="dog">Dogs</label>
           </td>
         </tr>
         <tr>
           <td colspan="1">
-            <input type="checkbox" id="bird" name="bird">
+            <input type="checkbox" id="bird" name="animal">
             <label for="bird">Birds</label>
           </td>
           <td colspan="1">
-            <input type="checkbox" id="bunny" name="bunny">
+            <input type="checkbox" id="bunny" name="animal">
             <label for="bunny">Bunnies</label>
           </td>
         </tr>
         <tr>
           <td colspan="1">
-            <input type="checkbox" id="horse" name="horse">
+            <input type="checkbox" id="horse" name="animal">
             <label for="horse">Horses</label>
           </td>
           <td colspan="1">
-            <input type="checkbox" id="otherPets" name="otherPets">
+            <input type="checkbox" id="otherPets" name="animal">
             <label for="otherPets">Others</label>
-            <input type="text" id="other1" name="other1">
+            <input type="text" id="other1" name="animal">
           </td>
         </tr>
       </table>
