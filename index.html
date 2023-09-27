@@ -38,7 +38,7 @@
     
     input[id="address"] {
       width: 930px;
-      height: 60px;
+      height: 30px;
       margin-left: 20px;
       margin-top: 10px;
     }
@@ -111,41 +111,28 @@
     margin: 10px auto;
     }
   </style>
-  <script>
-  const form = document.getElementById('myForm');
-  form.addEventListener('submit', function (event) {
-    const checkboxes = document.querySelectorAll('input[name="animal"]');
-    let atLeastOneChecked = false;
-    checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-        atLeastOneChecked = true;
-      }
-    });
-    if (!atLeastOneChecked) {
-      alert('Please check at least one checkbox before submitting.');
-      event.preventDefault(); // Prevent form submission
-    }
-  });
-</script>
 </head>
 <body>
   <div class="container">
     <br>
     <h1>૮ฅ・ﻌ・აฅ Animal Shelter Volunteer ₍ ᐢ. ̫ .⑅ᐢ ₎</h1>
     <h2>✧˖°. Registration Form .°˖✧</h2>
-    <form method="POST" action="https://almirarana31.github.io/extralink/">
-      <fieldset>
-        <legend>Please fill in this form accordingly!</legend>
-      <h3>Personal Details</h3>
-      <label for="fname">First Name:</label>
-      <input type="text" minlength="1" id="fname" name="fname" required><br><br>
-      <label for="lname">Last Name:</label>
-      <input type="text" minlength="1" id="lname" name="lname" required><br><br>
-      <label for="dob">Date of Birth:</label>
-      <input type="date" max="2012-01-01" id="dob" name="dob" required><br><br>
-
-      <div style="text-align: center;">
-        <table style="width: 50%; margin: 0 auto;">
+    
+<table>
+      <tr>
+        <td>
+          <form method="POST" action="https://almirarana31.github.io/extralink/">
+            <fieldset>
+              <legend>Please fill in this form accordingly!</legend>
+              <h3>Personal Details</h3>
+              <label for="fname">First Name:</label>
+              <input type="text" minlength="1" id="fname" name="name" required><br><br>
+              <label for="lname">Last Name:</label>
+              <input type="text" minlength="1" id="lname" name="name" required><br><br>
+              <label for="dob">Date of Birth:</label>
+              <input type="date" max="2012-01-01" id="dob" name="dob" required><br><br>
+              <div style="text-align: center;">
+          <table style="width: 50%; margin: 0 auto;">
           <tr>
             <td rowspan="4">
               <h3>Gender</h3>
@@ -187,13 +174,15 @@
         <option value="ban">Banten (Serang)</option>
       </select><br><br>
       <label for="address">Address:</label><br>
-      <input type="text" minlength="1" id="address" name="address" required><br><br>
+      <input type="text" minlength="1" id="address" name="address" required>
+      <br><br>
 
   
       <table style="margin: 0 auto;">
         <tr>
           <td colspan="2">
             <h3 style="text-align: center;">Animals You Have Cared for:</h3>
+            <p style="text-align: center;">(Do not select any if you have never taken care of an animal)</p>
           </td>
         </tr>
         <tr>
@@ -228,14 +217,17 @@
           </td>
         </tr>
       </table>
+      
 
       <h3>Reasons for Volunteering:</h3>
       <textarea id="reason" name="reason" rows="10px" cols="130px" required></textarea>
       <br><br>
       <input type="submit">
-      </fieldset>
-
-    </form>
+    </fieldset>
+  </form>
+</td>
+</tr>
+</table>
   </div>
 </body>
 </html>
