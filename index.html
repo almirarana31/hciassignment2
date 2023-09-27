@@ -111,6 +111,22 @@
     margin: 10px auto;
     }
   </style>
+  <script>
+  const form = document.getElementById('myForm');
+  form.addEventListener('submit', function (event) {
+    const checkboxes = document.querySelectorAll('input[name="animal"]');
+    let atLeastOneChecked = false;
+    checkboxes.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        atLeastOneChecked = true;
+      }
+    });
+    if (!atLeastOneChecked) {
+      alert('Please check at least one checkbox before submitting.');
+      event.preventDefault(); // Prevent form submission
+    }
+  });
+</script>
 </head>
 <body>
   <div class="container">
